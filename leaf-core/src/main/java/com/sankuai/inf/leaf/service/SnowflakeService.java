@@ -23,6 +23,10 @@ public class SnowflakeService {
             }
     }
 
+    public SnowflakeService() {
+
+    }
+
     public Result getId(String key) {
         return idGen.get(key);
     }

@@ -1,0 +1,18 @@
+leaf:
+  # leaf 服务名
+  name: com.sankuai.leaf.opensource.test
+  # 号段模式
+  segment:
+    # 是否开启号段模式 默认值false
+    enable: true
+    url: jdbc:mysql://localhost:3306/leaf?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  # 雪花算法模式
+  snowflake:
+    # 是否开启snowflake模式 默认值false. 算法取自twitter开源的snowflake算法。
+    enable: true
+    # snowflake模式下的zk地址
+    address: localhost:2181
+    # snowflake模式下的服务注册端口
+    port: ${server.port}
