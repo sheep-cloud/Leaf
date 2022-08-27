@@ -7,11 +7,12 @@ import java.util.List;
 
 public interface IDAllocMapper {
 
-    @Select("SELECT biz_tag, max_id, step, update_time FROM leaf_alloc")
+    @Select("SELECT biz_tag, max_id, step, description, update_time FROM leaf_alloc")
     @Results(value = {
             @Result(column = "biz_tag", property = "key"),
             @Result(column = "max_id", property = "maxId"),
             @Result(column = "step", property = "step"),
+            @Result(column = "description", property = "description"),
             @Result(column = "update_time", property = "updateTime")
     })
     List<LeafAlloc> getAllLeafAllocs();
