@@ -1,0 +1,43 @@
+{
+  "properties": [
+    {
+      "name": "leaf.name",
+      "type": "java.lang.String",
+      "description": "Description for leaf.name."
+    },
+    {
+      "name": "leaf.segment.enable",
+      "type": "java.lang.String",
+      "description": "Description for leaf.segment.enable."
+    },
+    {
+      "name": "leaf.segment.url",
+      "type": "java.lang.String",
+      "description": "Description for leaf.segment.url."
+    },
+    {
+      "name": "leaf.segment.username",
+      "type": "java.lang.String",
+      "description": "Description for leaf.segment.username."
+    },
+    {
+      "name": "leaf.segment.password",
+      "type": "java.lang.String",
+      "description": "Description for leaf.segment.password."
+    },
+    {
+      "name": "leaf.snowflake.enable",
+      "type": "java.lang.String",
+      "description": "Description for leaf.snowflake.enable."
+    },
+    {
+      "name": "leaf.snowflake.address",
+      "type": "java.lang.String",
+      "description": "Description for leaf.snowflake.address."
+    },
+    {
+      "name": "leaf.snowflake.port",
+      "type": "java.lang.String",
+      "description": "Description for leaf.snowflake.port."
+    }
+  ] }
