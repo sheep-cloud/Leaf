@@ -5,7 +5,8 @@ leaf:
   segment:
     # 是否开启号段模式 默认值false
     enable: true
-    url: jdbc:mysql://hadoop102:3306/leaf?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://localhost:3306/leaf?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://localhost:3306/leaf?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     username: root
     password: 123456
   # 雪花算法模式
@@ -13,6 +14,6 @@ leaf:
     # 是否开启snowflake模式 默认值false. 算法取自twitter开源的snowflake算法。
     enable: true
     # snowflake模式下的zk地址
-    address: hadoop102:2181,hadoop103:2181,hadoop104:2181
+    address: localhost:2181
     # snowflake模式下的服务注册端口
     port: ${server.port}

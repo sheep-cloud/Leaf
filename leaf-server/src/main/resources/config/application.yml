@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: local
   freemarker:
     cache: false
     charset: utf-8

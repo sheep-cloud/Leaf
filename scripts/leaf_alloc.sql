@@ -1,10 +1,27 @@
-DROP TABLE IF EXISTS `leaf_alloc`;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE `leaf_alloc` (
-  `biz_tag` varchar(128)  NOT NULL DEFAULT '',
-  `max_id` bigint(20) NOT NULL DEFAULT '1',
-  `step` int(11) NOT NULL,
-  `description` varchar(256)  DEFAULT NULL,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`biz_tag`)
+CREATE DATABASE IF NOT EXISTS `leaf` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `leaf`;
+
+DROP TABLE IF EXISTS `leaf_alloc`;
+CREATE TABLE IF NOT EXISTS `leaf_alloc` (
+    `biz_tag` varchar(128)  NOT NULL DEFAULT '',
+    `max_id` bigint(20) NOT NULL DEFAULT '1',
+    `step` int(11) NOT NULL,
+    `description` varchar(256)  DEFAULT NULL,
+    `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`biz_tag`)
 ) ENGINE=InnoDB;
+
+INSERT INTO leaf.leaf_alloc
+    (biz_tag, max_id, step)
+VALUES
+    ('leaf-segment-test', 10000, 1),
+    ('snowflakeService', 10001, 1);
